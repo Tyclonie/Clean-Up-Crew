@@ -21,11 +21,16 @@ class CleanUpClient(discord.Client):
                     except Exception as e:
                         print(str(e))
                     await message.channel.send(f"Deleted {str(message.content)} message(s)", delete_after=3)
+                elif message.content == "gc-leave-all":
+                    for channel in self.private_channels:
+                        if "Direct Message" not in str(channel):
+                            await channel.leave()
 
     def __init__(self, token):
         super().__init__()
         self.add_events()
         self.run(token, bot=False)
+
 
 if __name__ == "__main__":
     CleanUpClient(sys.argv[1])
