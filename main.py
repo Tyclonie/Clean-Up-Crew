@@ -20,7 +20,7 @@ class CleanUpClient(discord.Client):
                             await m.delete()
                     except Exception as e:
                         print(str(e))
-                await message.channel.send(f"Deleted {str(message.content)} message(s)")
+                    await message.channel.send(f"Deleted {str(message.content)} message(s)", delete_after=3)
 
     def __init__(self, token):
         super().__init__()
