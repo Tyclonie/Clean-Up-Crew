@@ -15,9 +15,9 @@ class CleanUpClient(discord.Client):
                     await message.delete()
                     try:
                         messages = await message.channel.history(limit=int(message.content)).flatten()
-                        for m in messages:
+                        for msg in messages:
                             await asyncio.sleep(0.7)
-                            await m.delete()
+                            await msg.delete()
                     except Exception as e:
                         print(str(e))
                     await message.channel.send(f"Deleted {str(message.content)} message(s)", delete_after=3)
