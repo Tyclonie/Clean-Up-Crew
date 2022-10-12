@@ -3,5 +3,5 @@ A client that creates the ability for users to be able to cleanse their discord 
 
 ## Notes
 - This is against Discord TOS and could lead towards your account getting banned
-- This is an outdated peice of software and is no longer kept upto date. As a result an older version of discord.py may be required. Something around the age of this repository will work, discord.py 2.0 prevents the use of self bots and potentially some previous versions do the same.
+- You may require an older version of discord.py, something around the age of this repository, this is due to this being an outdated peice of software and is no longer kept upto date. Discord.py 2.0 prevents the use of self bots and potentially some previous versions do the same.
 - This ***repository will be archived*** as no more changes are necessary
